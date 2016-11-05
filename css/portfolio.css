@@ -1,4 +1,4 @@
-/* CSS for trishatobias.com. Cool beans. */
+/* Trisha Tobias was here. Cool beans. */
 article, section, aside, hgroup, nav, header, footer, figure, figcaption {
   display: block; }
 
@@ -13,6 +13,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
+  font-kerning: normal;
   line-height: 1.8em;
   letter-spacing: 0.03em;
   color: #746e68;
@@ -64,7 +65,7 @@ h3 {
   font-size: 12px;
   font-weight: 700;
   margin-left: 4px;
-  margin-top: 1%;
+  margin-top: auto;
   display: inline-block; }
 
 /* Links */
@@ -95,7 +96,7 @@ a, a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #a18155;
+  color: #d5ae78;
   transition: color 0.6s ease-in-out; }
 
 /* Page */
@@ -106,9 +107,12 @@ a:hover {
   right: 0;
   float: right;
   width: calc(100% - 150px);
-  padding-bottom: 70px; }
+  padding-bottom: 20px; }
 
-/* Logo Animation */
+.page > img {
+  display: none; }
+
+/* Animation */
 #logo {
   width: 90px;
   height: 90px;
@@ -173,7 +177,8 @@ a:hover {
 .work {
   width: 100%;
   clear: both;
-  margin-left: 3%; }
+  margin-left: 3%;
+  display: none; }
 
 .entry {
   width: 21.5%;
@@ -203,7 +208,8 @@ a:hover {
   width: 100%;
   margin-left: 5%;
   margin-right: 1%;
-  margin-top: 3%; }
+  margin-top: 3%;
+  display: none; }
   .featured p:last-child {
     border-top: 1px solid #ddcfbc;
     padding-top: 19px; }
@@ -217,11 +223,22 @@ a:hover {
   margin-right: 3%;
   float: left; }
 
+.heroimage-artwork {
+  background: url("../assets/featured-artwork.png") no-repeat;
+  background-size: 100%;
+  width: 50%;
+  height: 370px;
+  margin-bottom: 0;
+  margin-right: 3%;
+  float: left; }
+
 .featuredtext {
   width: 390px;
   float: left;
   margin-top: 3.5%;
-  margin-left: 40px; }
+  margin-left: 40px;
+  position: relative;
+  z-index: 1000; }
   .featuredtext p {
     margin-top: 20px;
     margin-left: 2px; }
@@ -265,6 +282,14 @@ a:hover {
   margin-right: 20%;
   margin-bottom: 20px; }
 
+.imgpadding4 {
+  width: 50%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 20px; }
+
 .imgpaddingslide {
   width: 60%;
   margin-top: auto;
@@ -280,14 +305,15 @@ a:hover {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-left: 5%; }
+  padding-left: 5%;
+  display: none; }
 
 .brief {
   width: 34%;
   text-align: right;
   display: inline-block;
   vertical-align: top;
-  margin-top: -5px;
+  margin-top: 0px;
   margin-left: 6%;
   float: left; }
   .brief p {
@@ -315,6 +341,7 @@ h4 {
   width: 100%;
   border-bottom: 1px solid #b18f61;
   font-size: 30px;
+  line-height: 1.25em;
   color: #b18f61;
   font-weight: 400;
   margin-bottom: 1px;
@@ -325,10 +352,22 @@ h4 {
     font-style: italic;
     color: #7a7a7a; }
 
+h5 {
+  width: 100%;
+  font-size: 20px;
+  color: #b18f61;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 60px; }
+
 .descacross {
   width: 70%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  display: none; }
+
+.last {
+  margin-bottom: 50px; }
 
 .centeredtext {
   text-align: center; }
@@ -339,7 +378,8 @@ h4 {
   overflow: hidden;
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  display: none; }
 
 .rslides li {
   -webkit-backface-visibility: hidden;
@@ -374,13 +414,194 @@ h4 {
 
 /* Zoomer */
 .viewer {
-  width: 99%;
+  width: 100%;
   height: 500px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 5em;
   display: inline-block;
   clear: both;
+  float: left;
+  display: none; }
+
+/* About Page */
+.about {
+  width: 580px;
+  height: auto;
+  margin-left: 28%;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  float: left;
+  clear: both; }
+
+.blurb {
+  width: 100%;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  color: #b18f61;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  clear: both;
+  line-height: 1.4em; }
+
+.hello {
+  width: 100%;
+  font-size: 60px;
+  font-weight: 400;
+  font-style: italic;
+  color: #b18f61;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  clear: both; }
+
+.abouttext {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both; }
+
+.aboutinfo {
+  width: 48%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
   float: left; }
+  .aboutinfo p {
+    margin: 0;
+    text-align: center; }
+
+.personalprojects {
+  width: 100%;
+  height: 320px;
+  text-align: center;
+  padding: auto;
+  border-top: double #dac7ae;
+  border-bottom: double #dac7ae;
+  margin-top: 60px;
+  margin-bottom: 0px;
+  clear: both; }
+  .personalprojects p {
+    margin: 0; }
+  .personalprojects img {
+    margin-bottom: 20px;
+    width: 60px;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+
+.column {
+  width: 300px;
+  text-align: center;
+  display: inline-block;
+  margin: auto; }
+
+.followme {
+  text-align: center;
+  border-bottom: double #dac7ae; }
+  .followme h5 {
+    margin-bottom: 10px; }
+  .followme ul {
+    display: block;
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px; }
+    .followme ul img {
+      width: 40px; }
+
+.aboutthesite {
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px; }
+  .aboutthesite p {
+    font-size: 8pt; }
+  .aboutthesite ul {
+    display: block;
+    margin: 0;
+    padding: 0; }
+    .aboutthesite ul img {
+      width: 40px; }
+
+.borderright {
+  border-right: 1px solid #eeeeee;
+  margin-right: 16px; }
+
+.bordertop {
+  border-top: 1px solid #eeeeee;
+  margin-top: 20px;
+  padding-top: 20px; }
+
+/* Animation */
+figure {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-left: 1.25%;
+  margin-right: 1.25%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #d7be9d; }
+  figure img {
+    width: 80%; }
+
+#gif-animations {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  clear: both;
+  display: block;
+  margin-bottom: 20px; }
+
+/* Footer */
+footer {
+  border-top: 1px solid #ddcfbc;
+  width: 93%;
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  clear: both;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  display: none; }
+  footer p {
+    display: inline-block;
+    width: auto;
+    float: left;
+    vertical-align: middle;
+    margin-top: 14px;
+    padding: 0; }
+  footer ul {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin-top: 9px;
+    margin-left: 10px;
+    margin-bottom: 0; }
+    footer ul li {
+      display: inline-block;
+      float: left; }
+
+video {
+  display: block !important; }
+
+.toggle-mobile {
+  display: none !important; }
+
+.footericon {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  filter: alpha(opacity=100); }
 
 /*# sourceMappingURL=portfolio.css.map */
